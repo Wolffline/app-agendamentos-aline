@@ -10,13 +10,13 @@ var app = {
     },
 
     inserir: function(){
+        var db = firebase.firestore();
+
         let cnome = document.getElementById("txtNome").value;
         let ctelefone = document.getElementById("txtTelefone").value;
         let corigem = document.getElementById("txtOrigem").value;
         let cdata_contato = document.getElementById("txtDataContato").value;
         let cobservacao = document.getElementById("txtObservacao").value;
-        
-        var db = firebase.firestore();
 
         db.collection("agendamentos").add({
             nome: cnome,
